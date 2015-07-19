@@ -1,12 +1,14 @@
 package com.gorrotowi.popularmoviesone.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.gorrotowi.popularmoviesone.MovieDetailActivity;
 import com.gorrotowi.popularmoviesone.R;
 import com.gorrotowi.popularmoviesone.entitys.ItemImgMovie;
 import com.squareup.picasso.Picasso;
@@ -34,11 +36,19 @@ public class AdapterMovies extends RecyclerView.Adapter<AdapterMovies.MoviewView
     }
 
     @Override
-    public void onBindViewHolder(MoviewViewHolder holder, int position) {
+    public void onBindViewHolder(MoviewViewHolder holder, final int position) {
         Picasso.with(context)
-                .load(context.getString(R.string.base_img_url)+itemImgMovies.get(position).getImgpath())
+                .load(context.getString(R.string.base_img_url) + itemImgMovies.get(position).getImgpath())
 //                .placeholder(R.drawable.abc_btn_check_to_on_mtrl_015)
                 .into(holder.imageView);
+
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, MovieDetailActivity.class).putExtra("jsondata", itemImgMovies.get(position).getJsonMovie().toString()));
+            }
+        });
+
     }
 
     @Override
