@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/mynanodegreeapps"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/layoutbuttons"
+        android:layout_marginLeft="@dimen/layoutbuttons"
+        android:layout_marginRight="@dimen/layoutbuttons"
+        android:layout_marginStart="@dimen/layoutbuttons"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button"
+            android:background="@color/udacity_orange"
+            android:onClick="btnSpotify"
+            android:text="@string/spotifyapp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button"
+            android:background="@color/udacity_orange"
+            android:onClick="scoreapp"
+            android:text="@string/scoreapp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button"
+            android:background="@color/udacity_orange"
+            android:onClick="libraryapp"
+            android:text="@string/libraryapp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button"
+            android:background="@color/udacity_orange"
+            android:onClick="btnSpotify"
+            android:text="@string/buildbigger" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button"
+            android:background="@color/udacity_orange"
+            android:onClick="xyzreader"
+            android:text="@string/reader" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_button"
+            android:background="@color/red_button"
+            android:onClick="capstonemyapp"
+            android:text="@string/capstone"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>
